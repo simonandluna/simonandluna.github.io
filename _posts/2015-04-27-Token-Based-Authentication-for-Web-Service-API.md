@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Token based Authentication for Web Service API
+comments: true
+published: true
+categories:
+author: Gang Wu (Simon)
 ---
 
 Token provides the best way of handling web service authentication
