@@ -5,7 +5,6 @@ comments: true
 published: true
 categories: restful
 feature-img: "img/feature_image_1.jpg"
-author: Gang Wu (Simon)
 ---
 
 Token provides the best way of handling web service authentication

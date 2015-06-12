@@ -2,6 +2,10 @@
 
 {% if site.theme.footer_text %}
 <footer class="site-footer">
-	<p class="text">{{ site.theme.footer_text }}</p>
+	<p class="text">
+     &#169; {{site.time | date: '%Y' }}
+        <a href="{{ site.url }}">{{ site.theme.title }}</a> powered by
+        <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+    </p>
 </footer>
 {% endif %}

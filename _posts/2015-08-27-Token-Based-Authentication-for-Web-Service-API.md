@@ -5,7 +5,10 @@ comments: true
 published: true
 categories: restful
 feature-img: "img/feature_image_1.jpg"
-author: Gang Wu (Simon)
+author:
+  name: Gang Wu (Simon)
+  url: https://simonandluna.github.io
+location: San Francisco, CA
 ---
 
 Token provides the best way of handling web service authentication
