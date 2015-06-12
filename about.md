@@ -2,14 +2,11 @@
 layout: page
 title: About
 permalink: /about/
+feature-img: "img/feature_image_1.jpg"
 ---
 
-Some information about you!
+Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
 
-### More Information
+Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-![email](/images/email.png "Contact Me!")
+This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.

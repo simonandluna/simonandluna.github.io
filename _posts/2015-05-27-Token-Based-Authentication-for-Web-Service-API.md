@@ -3,8 +3,8 @@ layout: post
 title: Token based Authentication for Web Service API
 comments: true
 published: true
-categories:
-author: Gang Wu (Simon)
+categories: restful
+feature-img: "img/feature_image_1.jpg"
 ---
 
 Token provides the best way of handling web service authentication
@@ -17,7 +17,7 @@ so on. Token-based authentication have the following benefits:
  - It works for both web and mobile applications.
  - It's independent with platforms and domains, as long as the user has a valid token
 
-## Server-Based Authentication ##
+## Server-Based Authentication
 
 Traditionally, we use a server-based method to authenticate a user for
 API requests using a combination of username and password. Since HTTP
@@ -26,17 +26,17 @@ request is on next request. We have to authentize the user again. Thus, user
 login information have to be remembered by the server on the request session,
 either in the memory or stored in the disk. This causes two major issues:
 
-### Session ###
+### Session
 Whenever, the user is authenticated, the server has to create a record (state) somewhere,
 either in memory or in database. This causes overhead for the server when number of
 users increase on using application.
 
-### Scalability ###
+### Scalability
 The server also faces the scalability issue when number of users increase. When servers
 start to replicate in the cloud, we have to handle the session information in the memory,
 which limit our scale capability.
 
-## Token-Based Authentication ##
+## Token-Based Authentication
 Token-based method overcomes major issues of server-based method. Token, a.k.a, access token,
 is an object which contains the identity and privileges of the user account associated with the process or thread. When a user logs on, the system verifies the user's password by comparing it with information stored in a security database. If the password is authenticated, the system produces an access token. Every process executed on behalf of this user has a copy of this access token.
 
