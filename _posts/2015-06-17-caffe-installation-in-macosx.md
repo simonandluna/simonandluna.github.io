@@ -125,6 +125,19 @@ $ make runtest
 $ make pycaffe
 {% endhighlight %}
 
+### Demo 
+Now you can play with the web demo after downloading dataset and Caffe model.
+
+{% highlight bash linenos %}
+$ data/ilsvrc12/get_ilsvrc_aux.sh 
+$ python scripts/download_model_binary.py models/bvlc_reference_caffenet
+$ /usr/bin/python examples/web_demo/app.py
+{% endhighlight %}
+
+Demo looks like the following:
+
+![Caffe Demo in 127.0.0.1:5000](/img/caffe_demo_screenshot.png)
+
 ### Tips
 
 - If you see some `OpenCV` files can't be found when building caffe, make sure if their include files and libs are installed into `/usr/local/include` and `/usr/local/lib`. If not, that means homebrew doesn't copied them into locations which are not found in your `$PATH`. An alternative is to symbolically link them.
@@ -132,5 +145,43 @@ $ make pycaffe
 {% highlight bash linenos %}
 $ sudo ln -s /usr/local/Cellar/opencv/2.4.11_1/include/opencv* /usr/local/include/
 $ sudo ln -s /usr/local/Cellar/opencv/2.4.11_1/lib/libopencv* /usr/local/lib/ 
+{% endhighlight %}
+
+ - If you choose Anaconda as your Python library, you need to change settings in `Makefile.config` to let Caffe builder know where include and lib files are located. In my case, both Anaconda and Mac's default Pythons work for me to build Caffe modules for Python. However, the web demon works only when I use default Python. Here are changes I made:
+
+{% highlight make linenos %}
+# NOTE: this is required only if you will compile the python interface.
+# We need to be able to find Python.h and numpy/arrayobject.h.
+# PYTHON_INCLUDE := /usr/include/python2.7 \
+#       /usr/lib/python2.7/dist-packages/numpy/core/include
+# Anaconda Python distribution is quite popular. Include path:
+# Verify anaconda location, sometimes it's in root.
+ANACONDA_HOME := $(PYENV_ROOT)/versions/anaconda-2.2.0
+PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
+    $(ANACONDA_HOME)/include/python2.7 \
+    $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \
+
+# We need to be able to find libpythonX.X.so or .dylib.
+# PYTHON_LIB := /usr/lib
+PYTHON_LIB := $(ANACONDA_HOME)/lib
+{% endhighlight %}
+
+Here are commands I used to install Anaconda python in my Mac Airbook:
+
+{% highlight bash linenos %}
+# Install Pyenv and Anaconda
+brew install pyenv
+pyenv install anaconda-2.2.0
+pyenv rehash
+sudo pyenv local anaconda-2.2.0
+sudo pyenv global anaconda-2.2.0
+
+# Update packages in Anaconda
+conda update conda
+conda update anaconda
+
+# Check anaconda path
+conda env list
+/Users/zoro/.pyenv/versions/anaconda-2.2.0
 {% endhighlight %}
 
