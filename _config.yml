@@ -1,33 +1,36 @@
 # SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://simonandluna.github.io" # the base hostname & protocol for your site
+baseurl: ""
+url: "https://coldwellbank.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
-  title: Gang Wu (Simon)
-  avatar: simon_avatar.png
+  title: Luna Song
+  avatar: assets/img/luna_avatar.png
+  favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "I Love Data Science!" # used by search engines
+  description: "A Coldwell Banker Real Estate Agent" # used by search engines
 
   # Header and footer text
   header_text: >
-     <p>With big data and deep models, machines can think like a human being.</p>
-
-  header_text_feature_image: "img/feature_image_1.jpg"
+     <p></p>
+     <p></p>
+     <p>Your peronsal realtor in Bay Area to help you find your dream house!</p>
+     <p></p>
+     <p></p>
+  header_text_feature_image: "assets/img/feature_image_1.jpg"
 
   # Icons
   rss: false
-  email_address: gangwoo@gmail.com # Full email address, e.g. "sam@example.com"
+  email_address: baina2009@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
-  facebook: simon.wu.5036
+  facebook: luna.song.7
   flickr:
-  github: LamaBigData/lama-demo
   google_plus:
   instagram:
-  linkedin: "https://www.linkedin.com/in/simonandluna" # Full URL
+  linkedin: "https://www.linkedin.com/in/lunasong" # Full URL
   pinterest:
   reddit:
   soundcloud:
@@ -42,29 +45,38 @@ theme:
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: simonandluna
   katex: true # Enable if using math markup
-
+  
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
   str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  str_search_no_results: "No results found."
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
   google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
   # Post navigation
-  post_navigation: true
+  post_navigation: false
 
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
+plugins: [jekyll-paginate]
+theme: jekyll-theme-type
+exclude:
+  - Gemfile
+  - Gemfile.lock

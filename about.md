@@ -2,11 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "img/feature_image_1.jpg"
+feature-img: "assets/img/feature_image_1.jpg"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+Being a part of a wonderful team with Coldwell Banker who genuinely wants the best for their clients, Luna is a very honest, patient, enthusiastic and hard working licensed real estate agent. She has five-year experience of being a real estate investment manager in a US-China investment company before. The knowledge, coupled with her B.S. degree in Economics from Memorial university of newfoundland, Canada, has provided her with unique and valuable skills that she uses daily to help home buyers and sellers on real-estate negotiations and market analysis. 
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
-
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+Besides the real estate business, Luna also enjoys spending time with her family on exploring beautiful California.

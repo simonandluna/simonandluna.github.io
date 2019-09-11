@@ -1,3 +1,6 @@
+.post-content > :last-child {
+  margin-bottom: 0;
+}
 article,
 .comments {
   @extend %padding-regular;
@@ -6,12 +9,17 @@ article,
   width: 100%;
 }
 article {
+  .subtitle {
+    font-size: 1.45em;
+    font-weight: normal;
+    margin: 0;
+  }
   header {
     margin-bottom: 6%;
     text-align: center;
   }
-  a:hover {
-    @extend %link-hover;
+  a {
+    @extend .body-link;
   }
   .footnotes {
     font-size: 0.9em;
@@ -21,20 +29,13 @@ header {
   h1 {
     margin: 0;
   }
-  .meta {
-    color: rgba($text-color, .5);
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    margin: 0;
-    #text-transform: uppercase;
-  }
-  .meta2 {
-    color: rgba($text-color, .5);
-    font-size: 1.3em;
-    letter-spacing: 0.1em;
-    margin: 0;
-    #text-transform: uppercase;
-  }
+}
+.meta {
+  color: rgba($text-color, .5);
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
 }
 .feature-image {
   padding: 0%;
@@ -54,41 +55,3 @@ header {
     @extend %padding-regular;
   }
 }
-// Post navigation
-#post-nav {
-  width:100%;
-  border-bottom: 1px solid $border-color;
-  display: inline-block;
-
-  a, .page-title {
-    display: inline-block;
-  }
-
-  .page-title {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-
-  a {
-    @extend %padding-small;
-    border: 1px solid rgba(255, 255, 255, 0);
-    text-align: center;
-    width: 50%;
-  }
-  a:hover {
-    @extend a.button:hover;
-  }
-
-  #prev-post {
-      float: left;
-  }
-  #next-post {
-      float: right;
-  }
-
-  i {
-    vertical-align: middle;
-  }
-}
-
